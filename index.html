@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Revisão 1</title>
+  <link rel="shortcut icon" href="imagens/login.png" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+  <h1>Formulário</h1>
+  <form action="login.php" method="post" autocomplete="off">
+    <fieldset>
+      <legend>Login</legend>
+      <p>
+        <label for="inome">Nome:</label>
+        <input type="text" name="nome" id="inome"  minlength="3" maxlength="20" autocomplete="username" size="25">
+      </p>
+      <p>
+        <label for="isobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="isobrenome"  size="30">
+      </p>
+      <p>
+        <label for="iemail">E-mail:</label>
+        <input type="email" name="email" id="iemail" >
+      </p>
+      <p>
+        <label for="isenha">Senha:</label>
+        <input type="password" name="senha" id="isenha" autocomoplete="new password" minlength="5" maxlength="15" placeholder="Mín5 e Máx15 Caracteres" >
+      </p>
+      <p>
+        <label for="inota">Nota:</label>
+        <input type="number" name="nota" id="inota" min="0" max="10" placeholder="0 a 10" step=".5">
+      </p>
+      <p>
+        <label for="imes">Mês:</label>
+        <input type="month" name="mes" id="imes" >
+      </p>
+      <p>
+        <label for="idata">Data:</label>
+        <input type="date" name="data" id="idata" >
+      </p>
+      <p>
+        <label for="itempo">Tempo:</label>
+        <input type="time" name="tempo" id="itempo" >
+      </p>
+      <p>
+        <label for="itel">Telefone: </label>
+        <input type="tel" name="tel" id="itel" required placeholder="(xx)xxxxx-xxxx" pattern="^\(\d{2}\)\d{4,5}-[0-9]{4}$">
+      </p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </fieldset>
+  </form>
+</body>
+</html>

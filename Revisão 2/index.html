@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário 2</title>
+  <link rel="shortcut icon" href="/imagens/login.png" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+  <h1>Formulário 2</h1>
+  <form action="login.php" method="post" autocomplete="off">
+    <fieldset>
+      <legend>Login</legend>
+      <p>
+        <label for="inome">Nome:</label>
+        <input type="text" name="nome" id="inome" minlength="5" maxlength="30" autocomplete="username">
+      </p>
+      <p>
+        <label for="isobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="isobrenome" minlength="10" maxlength="40">
+      </p>
+      <p>
+        <label for="iemail">E-mail:</label>
+        <input type="email" name="email" id="iemail" placeholder="fulano@hotmail.com">
+      </p>
+      <p>
+        <label for="isenha">Senha:</label>
+        <input type="password" name="senha" id="isenha" autocomplete="new-password" minlength="5" maxlength="30" placeholder="Mín.5 Caracteres">
+      </p>
+      <p>
+        <label for="itel">Telefone:</label>
+        <input type="tel" name="tel" id="itel" placeholder="(99)99999-9999" required pattern="^\(\d{2}\)\d{4,5}-[0-9]{4}$">
+      </p>
+      <p>
+        Enviar Foto:
+        <input type="file" name="foto" id="ifoto">
+      </p>
+      <p class="botao">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </p>
+    </fieldset>
+  </form>
+  <form action="informacao.php" method="get" autocomplete="off">
+    <fieldset>
+      <legend>Informações Importantes</legend>
+      <p>
+        Sexo:
+        <input type="radio" name="genero" id="generomasc" checked value="M"> <label for="generomasc">Masculino</label>
+        <input type="radio" name="genero" id="generofem" value="F"> <label for="generofem">Feminino</label>
+      </p>
+      <p>
+        Selecione o Projeto da FJU em que você faz parte:
+      </p>
+      <p>
+        <input type="checkbox" name="midia" id="imidia"> <label for="imidia">Mídia</label>
+        <br>
+        <input type="checkbox" name="cultura" id="icultura"> <label for="icultura">Cultura</label>
+        <br>
+        <input type="checkbox" name="esporte" id="iesporte">
+        <label for="iesporte">Esportes</label>
+        <br>
+        <input type="checkbox" name="help" id="ihelp">
+        <label for="ihelp">Help</label>
+        <br>
+        <input type="checkbox" name="universitarios" id="iuniversitarios">
+        <label for="iuniversitarios">Universitários</label>
+      </p>
+      <p>
+        <input type="color" name="cor" id="icor" value="#2979F2"> <label for="icor">Cor</label>
+      </p>
+      <p>
+        <label for="inivel">Nível de Satisfação: </label>
+        <input type="range" name="nivel" id="inivel" min="0" max="10">
+      </p>
+      <p>
+        <label for="iestado">Estado:</label>
+        <select name="estado" id="iestado">
+          <option value="#" selected>---Selecione o Estado---</option>
+          <optgroup label="Estados do Sul">
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="RS">Rio Grande do Sul</option>
+          </optgroup>
+          <optgroup label="Estados do Nordeste">
+            <option value="BA">Bahia</option>
+            <option value="MA">Maranhão</option>
+            <option value="PE">Pernambuco</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <label for="iprofissao">Profissão: </label>
+        <input type="text" name="profissao" id="iprofissao" list="list1" placeholder="Selecione a Profissão">
+        <datalist id="list1">
+          <option value="DEV">Desenvolvedor</option>
+          <option value="MED">Medicina</option>
+          <option value="ENG">Engenharia</option>
+        </datalist>
+      </p>
+      <p class="botao">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </p>
+    </fieldset>
+  </form>
+</body>
+</html>
